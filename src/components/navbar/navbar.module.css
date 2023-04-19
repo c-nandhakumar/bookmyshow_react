@@ -1,0 +1,170 @@
+.parent {
+  background-color: #333545;
+}
+
+.navbar {
+  width: 82%;
+  height: 64px;
+  /* background-color: #333545; */
+  margin: 0 auto;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1em;
+  max-width: 1440px;
+}
+
+.bookmyshowsvg {
+  flex-shrink: 0;
+  margin-right: 10px;
+}
+
+.searchbox {
+  background-color: white;
+  color: grey;
+  padding: 10px 10px;
+  display: flex;
+  gap: 0.5rem;
+  width: inherit;
+  /* width: 35rem; */
+  justify-content: start;
+  align-items: center;
+  /* margin: 0px 10px 0px 10px; */
+  border-radius: 5px;
+}
+
+/* .searchboxcomponent {
+  /* padding-left: 30px; */
+
+.parentSearch {
+  position: relative;
+  flex-basis: 35rem;
+  /* width: 100%; */
+}
+
+.searchdropdown {
+  position: absolute;
+  background-color: white;
+  color: #000;
+  z-index: 1;
+  border-radius: 5px;
+  margin: 3px 10px 0px 0px;
+  display: flex;
+  /* flex-basis:35rem; */
+  width: 100%;
+  max-height: 20rem;
+  /* overflow-y: scroll; */
+  overflow-x: hidden;
+  flex-direction: column;
+}
+
+.searchdropdown::-webkit-scrollbar {
+  display: none;
+  /* width: 10px; */
+}
+
+.searchtile {
+  padding: 15px;
+  /* margin: 10px; */
+}
+
+.searchtile:hover {
+  background-color: #d5d5d6;
+}
+
+.firstboxdiv {
+  display: flex;
+  gap: 1em;
+  flex: 1;
+  align-items: center;
+  justify-content: start;
+  /* padding: 10px 0px; */
+  /* width: 55%; */
+}
+.secondboxdiv {
+  display: flex;
+  gap: 1em;
+  /* height: 100%; */
+  /* width: 45%; */
+  justify-content: end;
+  align-items: center;
+}
+
+.signinbutton {
+  margin: 0.5em;
+  border: none;
+  background-color: #e65463;
+  color: white;
+  font-size: 0.75rem;
+  height: 1.75rem;
+  width: 6em;
+  border-radius: 0.25rem;
+}
+
+.dropdownbutton {
+  font-size: 0.85rem;
+}
+
+.locationbutton {
+  display: none;
+  font-size: 0.75rem;
+  color: rgb(206, 205, 205);
+}
+
+.mobileview {
+  display: none;
+}
+
+.navhamburgericon {
+  display: block;
+}
+
+.titlecomponent {
+  margin: 0;
+  font-size: 1.35rem;
+}
+
+.secondarynavparent {
+  background-color: #222539;
+}
+
+.secondarynavbar {
+  /* background-color: #222539; */
+  font-size: 0.8rem;
+  max-width: 1440px;
+  width: 82%;
+  /* height: 64px; */
+  padding: 1em 0em;
+  /* background-color: #333545; */
+  margin: 0 auto;
+  color: #cccccc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1em;
+}
+
+@media (max-width: 768px) {
+  .searchbox,
+  .signinbutton,
+  .dropdownbutton,
+  .navhamburgericon,
+  .bookmyshowsvg,
+  .secondarynavbar,
+  .parentSearch {
+    display: none;
+  }
+  .navbar {
+    width: 92%;
+  }
+  .firstboxdiv {
+    flex-direction: column;
+    align-items: start;
+    gap: 0.1em;
+  }
+  .mobileview,
+  .locationbutton {
+    display: block;
+  }
+}
