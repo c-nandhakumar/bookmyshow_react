@@ -2,17 +2,27 @@ import React, { useEffect, useState } from "react";
 import tmdb from "../../api/tmdb";
 import MovieContainer from "./MovieContainer";
 import styles from "../movielist/moviecontainer.module.css";
+import { useDispatch, useSelector } from "react-redux";
+import { movieListActions } from "../../features/movieListSlice";
 
 function MovieList() {
-  const [movieslist, getMovies] = useState([]);
+  const [movieList, setMovieList] = useState([]);
+
+  const dispatch = useDispatch();
+
   useEffect(() => {
     const fetchMovies = async () => {
       let response = await tmdb.get("/discover/movie");
       console.log(response);
-      getMovies(response.data.results);
+      setMovieList(response.data.results);
+      // console.log(response);
+      dispatch(movieListActions.setMovieData(response.data.results));
+
+      // console.log(`State Value==>${movieList}`);
     };
     console.log("Movie List Mounted");
     fetchMovies();
+
     return console.log("Movie List Unmounted");
   }, []);
 
@@ -30,13 +40,15 @@ function MovieList() {
           />
         </p>
       </div>
+
       <div className={styles.maindiv}>
-        {movieslist
+        {movieList
           .filter((movie) => movie.backdrop_path != null)
-          .map((movie) => (
-            <MovieContainer key={movie.id} movies={movie}></MovieContainer>
+          .map((movie,index) => (
+            <MovieContainer key={movie.id} movies={movie} index={index}></MovieContainer>
           ))}
       </div>
+
       <img
         className={styles.banner}
         src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-1440,h-120:q-80/stream-leadin-web-collection-202210241242.png"

@@ -13,7 +13,7 @@ function MovieContainer(props) {
     // <Link to="movie/JSON.stringify(props.movies)">
     <Link
       // style={{ display: "block" }}
-      to={`movie/${props.movies.title}`}
+      to={`movie/${props.index}`}
       key={props.movies.id}
       className={styles.moviecontainer}
       // onClick={(e) => navigateToDetailsScreen(e, props.movies)}

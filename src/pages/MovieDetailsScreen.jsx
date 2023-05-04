@@ -1,16 +1,16 @@
 import { useParams } from "react-router-dom";
 import NavBar from "../components/navbar/NavBar";
 import SecondaryNavBar from "../components/navbar/SecondaryNavBar";
+import MovieDetails from "../components/moviedetail/MovieDetails";
 
 export default function MovieDetailsScreen() {
-  const { movieData } = useParams();
+  const { index } = useParams();
+
   return (
     <>
       <NavBar />
-      <SecondaryNavBar/>
-      <div>
-        <h1>{movieData}</h1>
-      </div>
+      <SecondaryNavBar />
+      <MovieDetails index={index} />
     </>
   );
 }

@@ -5,7 +5,7 @@ import MovieDetailsScreen from "../pages/MovieDetailsScreen";
 export default function PageRoute() {
   const pageRoutes = [
     { path: "/", element: <HomePage /> },
-    { path: "movie/:movieData", element: <MovieDetailsScreen /> },
+    { path: "movie/:index", element: <MovieDetailsScreen /> },
   ];
   return (
     <Routes>
